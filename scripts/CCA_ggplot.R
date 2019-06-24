@@ -24,7 +24,7 @@ version = '0.0.1'
 
 # Initialisation
 start_time <- Sys.time()
-if (!require("optparse")) install.packages("optparse")
+if (!require("optparse")){install.packages("optparse",dep = TRUE ,repos = "http://cran.us.r-project.org")}
 args <- commandArgs(trailingOnly = F)
 script.path <- dirname(sub("--file=","",args[grep("--file",args)]))[1]
 
